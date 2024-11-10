@@ -12,7 +12,16 @@ export const actions = {
 
     default: async ({request}:any) =>{
         const formData = Object.fromEntries(await request.formData());
-        console.log(formData)
+  
+
+
+        try {
+            const result = registerSchema.parse(formData)
+            console.log('success')
+            console.log(result)
+        } catch (errr) {
+            
+        }
     }
 }
 
