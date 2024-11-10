@@ -19,8 +19,8 @@ export const actions = {
             const result = registerSchema.parse(formData)
             console.log('success')
             console.log(result)
-        } catch (errr) {
-            
+        } catch (err) {
+            console.log(err)
         }
     }
 }
