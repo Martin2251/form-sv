@@ -5,7 +5,8 @@ const registerSchema = z.object({
     name: z.string().min(1).max(64).trim(),
     email: z.string().min(1).max(64).email(),
     password:z.string().min(6).max(12),
-    confirmPassword:z.string().min(6).max(32).trim(),
+    passwordConfirm:z.string().min(6).max(32).trim(),
+    terms:z.enum(['on'])
 })
 
 
